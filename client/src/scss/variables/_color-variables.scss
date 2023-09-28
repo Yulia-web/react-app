@@ -1,0 +1,34 @@
+$bg-color: #F5F5F5;
+$white: #fff;
+$black: #000;
+
+$accent: #D03664;
+$lightpurple: #FFEAF1;
+$discount: #F99C11;
+$grey: #585858;
+$lightgrey: #C7C7C7;
+$morrelightgrey: #E1E1E1;
+
+.green {
+  background: linear-gradient(208deg, #6AD245 0%, #58BE34 100%);
+}
+
+.yellow {
+  background: $discount;
+}
+
+.aqua {
+  background: linear-gradient(248deg, #2DEAE4 0%, #27D8D2 100%);
+}
+
+.blue {
+  background: linear-gradient(208deg, #4F8AE2 0%, #3A73C9 100%);
+}
+
+.red {
+  background: linear-gradient(247deg, #D84545 -1.64%, #CC3C3C 100%);
+}
+
+.purple {
+  background: linear-gradient(248deg, #A24FE2 0%, #8E3AD0 100%);
+}

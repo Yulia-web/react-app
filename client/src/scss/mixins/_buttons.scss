@@ -1,0 +1,47 @@
+@mixin PinkButton() {
+    background: #D03664;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    border: unset;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: #AA2B51;
+    }
+}
+
+@mixin RedLink() {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #D03664;
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+    
+    &:hover {
+        color: #AA2B51;
+    }
+}
+
+@mixin WhiteRoundButton {
+    background-color: white;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin WhiteButton {
+    color: #D03664;
+    border: 1px solid #D03664;
+    padding: 20px 30px;
+    border-radius: 10px;
+}

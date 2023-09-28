@@ -1,0 +1,103 @@
+.goods-item {
+  max-width: 234px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  position: relative;
+
+  .discount {
+    border-radius: 5px;
+    background: var(--discount, #F99C11);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 7px;
+    color: #FFF;
+    font-family: Comfortaa;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  img {
+    width: 100%;
+    max-width: 234px;
+    height: auto;
+  }
+
+  .title {
+    color: $color-black;
+    font-family: Comfortaa;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .discount-price {
+    color: #202020;
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    text-decoration: line-through;
+    line-height: normal;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .standart-price {
+    color: var(--discount, #F99C11);
+    font-family: Comfortaa;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .buy {
+    @include PinkButton();
+  }
+}
+
+.goods-block .title {
+  color: $color-black;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: Comfortaa;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  span {
+    display: inline-block;
+    height: 27px;
+    padding: 5px;
+    color: var(--discount, #F99C11);
+    font-size: 15px;
+    background-color: rgb(249,156,17, 0.2);
+    border-radius: 10px;
+  }
+}

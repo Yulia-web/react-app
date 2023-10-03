@@ -6,13 +6,12 @@ import { fetchGoods } from "../http/goodsApi";
 
 const GoodsList = observer(() => {
   const {goods} = useContext(Context)
-
   useEffect(() => {
     fetchGoods().then(data => goods.setGoods(data.rows))
   }, []);
 
   return (
-    <div>
+    <div className='goods-items'>
       {goods.goods.map(goods =>
         <GoodsItemt key={goods.id} goods={goods} />
       )}

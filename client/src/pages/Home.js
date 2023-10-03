@@ -7,7 +7,7 @@ import DiscountGoods from "../blocks/DiscountGoods";
 
 const Home = () => {
   return(
-    <div>
+    <div className="home-page">
       <Baner/>
        <DiscountGoods title="Акція!"/>
       <PopularCategory/>

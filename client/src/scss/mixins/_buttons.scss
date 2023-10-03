@@ -7,6 +7,7 @@
     text-transform: uppercase;
     border: unset;
     transition: all 0.3s ease-in-out;
+    text-align: center;
 
     &:hover {
         background: #AA2B51;
@@ -22,6 +23,7 @@
     background-color: unset;
     border: unset;
     box-shadow: unset;
+    text-align: center;
     
     &:hover {
         color: #AA2B51;
@@ -44,4 +46,44 @@
     border: 1px solid #D03664;
     padding: 20px 30px;
     border-radius: 10px;
+    text-align: center;
+
+    &:hover {
+      background: $lightpurple;
+    }
+}
+
+@mixin GreenButton {
+  color: #23F911;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 13px;
+  text-align: center;
+  border-radius: 10px;
+  background: rgba($color: #23F911, $alpha: 0.2);
+}
+
+@mixin GrayButton {
+  color: $grey;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 13px;
+  border-radius: 10px;
+  background: rgba($color: $grey, $alpha: 0.2);
+}
+
+@mixin discountButton {
+  border-radius: 5px;
+  background: $discount;
+  padding: 7px;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+
+  @media(min-width: 768px) {
+    font-size: 15px;
+  }
 }

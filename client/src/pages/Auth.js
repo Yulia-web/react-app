@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { HOME_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE } from "../utils/consts";
 
-import Logo from "../img/logo.png";
+import Logo from "../img/pink-logo.svg";
 import Google from "../img/social_media/google.png"
 import Facebook from "../img/social_media/facebook-registration.svg"
 import { registration, login } from "../http/userAPI";
@@ -51,6 +51,7 @@ const click = async() => {
           <div className="actions">
             <NavLink to={HOME_ROUTE} className="admission-button" onClick={() => click()}>Увійти</NavLink>
             <NavLink to={REGISTRATION_ROUTE} className="another-admission-button">У мене немає акаунта</NavLink>
+            <div className="reset-passsword">Забули пароль?</div>
           </div>
         </form>
         :

@@ -13,9 +13,66 @@ body {
   font-family: $font-family-Comfortaa;
   font-weight: 500;
   font-size: 14px;
+  line-height: normal;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media(max-width: 768px) { 
+    gap: 80px;
+  }
 }
 
 a {
   text-decoration: unset;
   color: white;
+}
+
+.not-available {
+  @include RedLink();
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li::marker {
+  font-size: 0;
+}
+
+h2.title {
+  color: $color-black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  @media(min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+@media(min-width: 360px) {
+  .container {
+    max-width: unset;
+    padding: 0 16px;
+  }
+}
+
+@media(min-width: 768px) {
+  .container {
+    max-width: unset;
+    padding: 0 30px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .container {
+    max-width: 1290px;
+  }
 }

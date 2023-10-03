@@ -1,0 +1,103 @@
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin price {
+  font-size: 17px;
+  font-weight: 300;
+
+  span {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+}
+
+@mixin full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 5;
+}
+
+@mixin discount-price {
+  color: #202020;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: line-through;
+  line-height: normal;
+
+  @media(min-width: $bp-sm) {
+    font-size: 20px;
+  }
+
+  span {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+}
+
+@mixin standart-price {
+  color: $discount;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: normal;
+
+  @media(min-width: $bp-sm) {
+    font-size: 24px;
+  }
+
+  span {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+}
+
+@mixin simple-price {
+  color: $color-black;
+  font-size: 15px;
+  font-weight: 300;
+
+  @media(min-width: $bp-sm) {
+    font-size: 17px;
+  }
+
+  span {
+    font-weight: 700;
+    margin-right: 5px;
+  }
+}
+
+@mixin selectItem {
+  @include flex-center();
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &::after {
+    content: '';
+    display: block;
+    background-image: url('../img/icons/grayArrowSimple.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 8px;
+  }
+}
+
+@mixin border-boottom {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $morelightgrey;
+}

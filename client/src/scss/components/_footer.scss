@@ -1,0 +1,268 @@
+.footer {
+  margin-top: 87px;
+}
+
+.block-with-email {
+  background-color: $discount;
+  padding: 40px 16px;
+
+  .container->img {
+    display: none;
+  }
+
+  &--header {
+    @include flex-column();
+    gap: 20px;
+
+    .email__input {
+      margin-right: 15px;
+    }
+  }
+
+  .email-form {
+    @include flex-center();
+  }
+
+  .title {
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  input {
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid $color-white;
+    background: rgba(255, 255, 255, 0.15);
+
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+}
+
+.contact-block {
+  background: $accent;
+
+  .container {
+    max-width: unset;
+    padding: unset;
+  }
+
+  .footer-information-items,
+  .footer-catalog-items {
+    padding: 20px 16px;
+  }
+
+  .information-heading,
+  .catalog-heading {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .footer__information-listt li,
+  .catalog-list li {
+    color: #FFF;
+    font-family: Comfortaa;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+    }
+  }
+}
+
+.footer-contact-items {
+  background: #AA2B51;
+  padding: 40px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .contact-phone-item {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .contact-email-item {
+    text-decoration-line: underline;
+  }
+
+  .contact-email-item,
+  .contact-addres-item {
+    color: $color-white;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.block-with-paymant {
+  background: $accent;
+
+  .container {
+    max-width: unset;
+    padding: 20px 16px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    color: #F3A8BF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .footer-paymant-items {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media(min-width: 768px) {
+  .block-with-email {
+    background-color: unset;
+    padding: unset;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url('../img/footer-image/bg.png');
+      width: 100%;
+      height: 260px;
+      z-index: -1;
+    }
+
+    .container- {
+      @include flex-center();
+      justify-content: space-between;
+      padding: 0 16px;
+
+      & > img {
+        display: block;
+      }
+    }
+
+    .block-with-email--header {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
+    .footer-menu {
+      display: flex;
+      gap: 50px;
+      padding: 0 16px;
+    }
+
+  .contact-block .catalog-list li,
+  .contact-block .footer-information-items {
+    max-width: 232px;    
+  }
+
+  .contact-block .footer-catalog-items,
+  .contact-block .footer-information-items {
+    padding: unset;
+    width: 100%;
+  }
+}
+
+@media(min-width: 1000px) {
+  .block-with-email .container-,
+  .footer-menu {
+    padding: 0 30px;
+  }
+
+  .footer-contact-item,
+  .block-with-paymant .container {
+    padding: 40px 30px;
+  }
+ }
+
+@media(min-width: 1440px) {
+  .block-with-email {
+    .container- {
+      display: flex;
+      gap: 110px;
+      align-items: center;
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+
+    &--header {
+      gap: 30px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+  }
+
+  .contact-block {
+    background: $accent;
+    padding: 60px 0 40px 0;
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1290px;
+    }
+
+    .information-heading,
+    .catalog-heading {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .footer-information-items {
+      margin-right: 100px;
+      min-width: 232px;
+    }
+  }
+
+  .footer-contact-items {
+    border-radius: 20px;
+    padding: 30px;
+    margin-right: 140px;
+
+    .contact-phone-item {
+      font-size: 20px;
+    }
+  }
+
+  .block-with-paymant {
+    background: $accent;
+
+    .container {
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+  }
+}

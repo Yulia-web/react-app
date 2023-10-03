@@ -1,0 +1,29 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+  
+  &__list {
+    display: flex;
+
+    a {
+      color: $accent;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: normal;
+
+      @media(min-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item::after {
+      content: '>';
+      color: $accent;
+      padding: 5px;
+  }
+}

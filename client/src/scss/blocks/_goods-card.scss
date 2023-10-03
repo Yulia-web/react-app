@@ -7,17 +7,11 @@
   position: relative;
 
   .discount {
-    border-radius: 5px;
-    background: var(--discount, #F99C11);
+    @include discountButton();
     position: absolute;
     top: 10px;
     left: 10px;
-    padding: 7px;
-    color: #FFF;
-    font-family: Comfortaa;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: normal;
+    font-size: 14px;
   }
 
   img {
@@ -28,44 +22,46 @@
 
   .title {
     color: $color-black;
-    font-family: Comfortaa;
-    font-size: 15px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 300;
-    line-height: normal;
+
+    @media(min-width: $bp-sm) { 
+      font-size: 15px;
+    }
   }
 
   .price {
     display: flex;
-    align-items: center;
     gap: 5px;
+    flex-direction: column;
+    gap: 5px;
+
+    @media(min-width: $bp-sm) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .discount-price {
-    color: #202020;
-    font-family: Comfortaa;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    text-decoration: line-through;
-    line-height: normal;
+    @include discount-price();
+    font-size: 12px;
 
-    span {
-      font-weight: 700;
+    @media(min-width: $bp-sm) {
+      font-size: 14px;
     }
   }
 
   .standart-price {
-    color: var(--discount, #F99C11);
-    font-family: Comfortaa;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include standart-price();
+    font-size: 15px;
 
-    span {
-      font-weight: 700;
+    @media(min-width: $bp-sm) {
+      font-size: 17px;
     }
+  }
+
+  .simple-price {
+    @include simple-price();
   }
 
   .action {
@@ -77,27 +73,45 @@
   .buy {
     @include PinkButton();
   }
+
+  .action-block {
+    display: none;
+  }
+
+  &:hover .action-block {
+    display: block;
+  }
 }
 
-.goods-block .title {
-  color: $color-black;
+.goods-list {
   display: flex;
+  gap: 30px;
+}
+
+.goods-block > .title {
+  @include flex-center();
+  color: $color-black;
   gap: 10px;
-  align-items: center;
-  font-family: Comfortaa;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: normal;
   text-transform: uppercase;
   margin-bottom: 30px;
+
+  @media(min-width: $bp-sm) {
+    font-size: 20px;
+  }
 
   span {
     display: inline-block;
     height: 27px;
     padding: 5px;
-    color: var(--discount, #F99C11);
-    font-size: 15px;
+    color: $discount;
+    font-size: 14px;
     background-color: rgb(249,156,17, 0.2);
     border-radius: 10px;
+
+    @media(min-width: $bp-sm) {
+      font-size: 15px;
+    }
   }
 }

@@ -1,0 +1,33 @@
+.search-block {
+  position: relative;
+  width: 100%;
+  max-width: 767px;
+  margin-left: 264px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/icons/search.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .search-form-field {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.15);
+
+  }
+
+  input::placeholder {
+    font-size: 15px;
+    color: $color-white;
+  }
+}

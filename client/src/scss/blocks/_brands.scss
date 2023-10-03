@@ -13,6 +13,11 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 15px;
+        font-size: 14px;
+
+        @media(min-width: 768px) {
+          font-size: 15px;
+        }
     }
 
     .look-more {

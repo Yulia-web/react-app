@@ -1,0 +1,12 @@
+.shop-page {
+  .goods-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+
+    .goods-item {
+      width: calc(50% - 10px);
+    }
+  }
+}

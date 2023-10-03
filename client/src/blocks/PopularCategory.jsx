@@ -17,7 +17,7 @@ export class PopularsCategory extends React.Component {
                 </div>
                 <div className='popular-category-block--container'>
                     <div className='popular-category-block-items'>
-                        <div className='popular-category-block-item green'>
+                        <div className='popular-category-block-item big-item green'>
                             <img src={Carriage} alt='img'/>
                             <div className='title'>Коляски 2в1</div>
                         </div>
@@ -33,7 +33,7 @@ export class PopularsCategory extends React.Component {
                         </div>
                     </div>
                     <div className='popular-category-block-items'>
-                        <div className='popular-category-block-item blue'>
+                        <div className='popular-category-block-item  big-item blue'>
                             <img src={Bed} alt='img'/>
                             <div className='title'>Постільна білизна</div>
                         </div>

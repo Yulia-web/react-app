@@ -16,7 +16,7 @@ const Shop = observer(() => {
   }, []);
 
   return(
-    <div>
+    <div className="shop-page">
       <FiltersBar/>
       <GoodsList/>
     </div>

@@ -22,6 +22,31 @@ const settings = {
   slidesToShow: 7,
   slidesToScroll: 7,
   nextArrow: <NextArrow />,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }
+  ]
 };
 
 

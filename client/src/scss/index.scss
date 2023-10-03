@@ -1,15 +1,25 @@
-@import './base';
 @import './mixins/buttons';
+@import './mixins/base-mixins';
+@import './base';
 
 @import './variables/breackpoints-variables';
 @import './variables/color-variables';
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
+@import './page/auth';
+@import './page/goods-page';
+
 @import './components/header';
+@import './components/footer';
+@import './components/basket';
 
 @import './blocks/brands';
 @import './blocks/categories';
 @import './blocks/sliders';
 @import './blocks/goods-card';
+@import './blocks/filter-menu';
+@import './blocks/goods-items';
 
+@import './elements/breadcramb';
 
+@import './form/range';

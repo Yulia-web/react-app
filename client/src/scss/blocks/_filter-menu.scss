@@ -1,0 +1,156 @@
+.base-filters {
+  &-title {
+    @include flex-center();
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+    &.active::after {
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 11px;
+      height: 6px;
+      background-image: url('../img//icons/grayArrowSimple.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &-items {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &-item {
+    color: $grey;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration-line: underline;
+    margin-bottom: 10px;
+  }
+}
+
+.filter-block-mobile {
+  position: relative;
+  @include flex-center();
+  gap: 20px;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .button-filter {
+    @include flex-center();
+    @include PinkButton();
+    gap: 5px;
+    font-size: 15px;
+    text-transform: unset;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 17px;
+      height: 17px;
+      background-image: url('../img/icons/filter.svg');
+    }
+  }
+
+  .filter-item {
+    @include flex-center();
+    @include WhiteButton();
+    gap: 10px;
+    color: $color-black;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 300;
+
+    .title {
+      text-wrap: nowrap;
+    }
+  }
+}
+
+.filter-block {
+  display: none;
+
+  &.active {
+    display: block;
+    @include full-screen();
+    padding: 70px 30px 30px 30px;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .filters {
+    @include border-boottom();
+
+    &-list {
+      @include  flex-center();
+      gap: 10px;
+      font-weight: 300;
+    }
+  }
+
+  .filters-producer {
+
+    .filters-title {
+      @include selectItem();
+    }
+
+    .filters-list ul {
+      @include flex-column();
+      gap: 15px;
+
+      li {
+        @include flex-center;
+        gap: 10px;
+      }
+    }
+  }
+
+  .category-filters {
+    @include border-boottom();
+
+    .filters-title {
+      @include selectItem();
+    }
+
+    .filters-list li {
+      font-weight: 300;
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .filters-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .filters-price-title {
+    @include selectItem();
+
+    &.active::after {
+      transform: rotate(180deg);
+    }
+  }
+}
